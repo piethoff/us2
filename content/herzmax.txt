@@ -1,0 +1,3 @@
+##
+#grundniveau/mm     schlagzustand/mm
+38.27               6.38
