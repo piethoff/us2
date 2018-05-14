@@ -44,7 +44,7 @@ Für den gesamten Blockdurchmesser ergibt sich ein Wert von
 \end{equation}
 Aus der Differenz der Messung mit der Schieblehre \eqref{block_schieb} und der Messung mit dem Scan \eqref{block_scan} ergibt sich die Schichtdicke:
 \begin{equation*}
-  \delta h = \SI{0.25}{\milli\meter}
+  \Delta h = \SI{0.25}{\milli\meter}
 \end{equation*}
 Diese wird im Folgenden von allen Messwerten abgezogen, um die tatsächliche Eindringungstiefe zu erhalten.
 \begin{table}[H]
@@ -155,7 +155,7 @@ Das Volumen eines Kugelschnittes lässt sich wie folgt berechnen:
 Wobei $r'$ der Radius der Herzmodells und $h$ die Auslenkungshöhe ist.
 Für die Messung mittels des A-Scans ergibt sich somit ein Herzvolumen von:
 \begin{equation}
-	V_\text{A-Scan} = \SI{4.29-e5}{\meter\cubed}
+	V_\text{A-Scan} = \SI{4.29e-5}{\meter\cubed}
 \end{equation}
 Anschließend wird der simulierte Herzschlag untersucht und die Messerbegnisse in Tabelle \ref{tab:schlag} aufgetragen.
 Von den Messwerten ist bereits das Grundniveau abgezogen.
@@ -195,15 +195,15 @@ Der Herzschlag wurde über eine Zeit von $\SI{27.8}{\second}$ gemessen.
 Der Mittelwert wird gebildet nach der Vorschrift:
 \begin{equation}
 	\overline{h} = \frac{\sum_i^\text{Anzahl der Messwerte}h_i}{\text{Anzahl der Messwerte}}
-\end{equaiton}
+\end{equation}
 Es wird zusätzlich eine Hilfsgröße eingeführt:
 \begin{equation}
 	\delta h_i = h_i-\overline{h}
-\end{equaiton}
+\end{equation}
 Die Standardabweichung kann geschrieben werden als:
 \begin{equation}
 	\symup\Delta\overline{h} = \sqrt{\frac{\sum_i^\text{Anzahl der Messwerte}(\delta h)^2}{(\text{Anzahl der Messwerte})(\text{Anzahl der Messwerte} - 1)}}
-\end{equaiton}
+\end{equation}
 Es ergibt sich somit eine mittlere Schlagauslenkung von
 \begin{equation}
    \overline{h}_\text{Herz} = \SI{14.48\pm0.19}{\milli\meter}
