@@ -4,22 +4,25 @@ Dabei sollen diese ein, zwei und drei dimensional betrachtet werden.
 \section{Theorie}
 \label{sec:Theorie}
 Ultraschall befindet sich in dem Spektrum von 20 kHz bis 1 GHz.
-Schall mit größeren Frequenzen wird als Hyperschall bezeichnet und Schall mit geringeren Frequenzen als Intraschall.
+Schall mit größeren Frequenzen wird als Hyperschall bezeichnet und Schall mit geringeren Frequenzen als Infraschall.
 Schall bewegt sich als longitudinale Welle gemäß
 \begin{equation}
   p(x,t) = p_0 + \nu_0 Z \cos{(\omega t - k x)}
 \end{equation}
  aufgrund von Durckschwankungen fort.
  $Z=c \rho$ beschreibt hier die akustische Impedanz, welche durch Dichte und Schallgeschwindigkeit in dem Material bestimmt wird.
+In Flüssigkeiten lässt sich die Schallgeschwindigkeit aus der Kompressibilität $\kappa$ und der Dichte $\rho$ wie folgt bestimmen:
+ \begin{equation}
+  c_\text{Fl}=\sqrt{\frac{1}{\kappa \rho}}   
+ \end{equation}
  In Festkörpern berechnet sich die Schallgeschwindigkeit, anders als in Flüssigkeiten, nach:
  \begin{equation}
-  c=\sqrt{\frac{E}{\rho}}   .
+  c_\text{Fe}=\sqrt{\frac{E}{\rho}}   
  \end{equation}
 Wobei $E$ das Elastizitätsmodul des entsprechenden Körpers ist.
 Die Schallausbreitung in einem Festkörper gestaltet sich schwieriger als in einer Flüssigkeit oder einem Gas.
 Es sind zusätzlich transversale Wellen möglich.
-Es resultiert, dass die Schallgeschwindigkeit im Festkörper Richtungsabhängig ist und die Intensität der Welle mit der Strecke $x$ abnimmt.
-Die exponentielle Abnahme ist in
+Es resultiert, dass die Schallgeschwindigkeit im Festkörper richtungsabhängig ist und die Intensität der Welle mit der Strecke $x$ exponentiell abnimmt:
 \begin{equation}
   I(x) = I_0 \exp{- \alpha x}
 \end{equation}
@@ -29,7 +32,7 @@ Der Reflexionskoeffizient berechnet sich dann mit:
 \begin{equation}
   R=\left(\frac{Z_1 - Z_2}{Z_1 + Z_2}\right)^2
 \end{equation}
-Dieser beschreibt das Verhältniss von einfallender zu reflektierter Schallintensität und wird mit der Impedanz der angrenzenden Materialien bestimmt.
+Dieser beschreibt das Verhältnis von einfallender zu reflektierter Schallintensität und wird mit der Impedanz der angrenzenden Materialien bestimmt.
 Der transmittierte Anteil lässt sich mit
 \begin{equation}
   T= 1-R
@@ -37,11 +40,11 @@ Der transmittierte Anteil lässt sich mit
 bestimmen.
 \subsection{Erzeugung von Ultraschall und Analyse-Verfahren}
 Ultraschall wird häufig mit piezoelektrischen Kristallen erzeugt.
-Wird ein solcher Kristall in ein elektrisches Wechselfeld gebracht beginnt, dieser zu schwingen.
-Der Kristall kann auch als Empfänger verwendet werden. Dabei treffen die Schallwellen auf den Kristall und regen ihn so zum Schingen an.
-Im allgemeinen wird zwischen zwei Verfahren in der Ultraschalltechnik verwendet, nämlich dem Durchschallungs-Verfahren und dem Impuls-Echo-Verfahren.
+Wird ein solcher Kristall in ein elektrisches Wechselfeld gebracht, beginnt dieser zu schwingen.
+Der Kristall kann auch als Empfänger verwendet werden. Dabei treffen die Schallwellen auf den Kristall und regen ihn so zum Schwingen an.
+Im Allgemeinen wird zwischen zwei Verfahren in der Ultraschalltechnik verwendet, nämlich dem Durchschallungs-Verfahren und dem Impuls-Echo-Verfahren.
 Für das Durchschallungs-Verfahren wird ein Sender an dem einen Ende und ein Empfänger an dem anderen Ende der zu untersuchenden Probe platziert.
-Befindet sich eine Fehlstelle in diesem, wird die Intensität abgeschwächt.
+Befindet sich eine Fehlstelle in dieser, wird die Intensität abgeschwächt.
 Der genaue Ort der Fehlstellen kann nicht festgestellt werden.
 Beim Impuls-Echo-Verfahren wird der Sender zusätzlich als Empfänger verwendet.
 Bei Fehlstellen kann die Höhe des Echos Aufschluss über die Größe der Fehlstelle geben.
@@ -53,7 +56,7 @@ Die Lage der Fehlstelle kann bei bekannter Schallgeschwindigkeit mit
 bestimmt werden.
 \\Die Laufzeitdiagramme können in A-Scan, B-Scan und TM-Scan dargestellt werden.
 Der A-Scan oder Amplitude-Scan ist ein eindimensionales Verfahren.
-Es werden die Echo-Amplituden gegen die Zeit aufgetragen.
+Es werden die Echo-Amplituden zusammen mit der Zeit in ein Diagramm aufgetragen.
 Der B-Scan oder Brightness-Scan ist ein zweidimensionales Verfahren.
 Die Echo-Amplituden werden zusammen mit die Helligkeit aufgetragen, um ein zweidimensionales Schnittbild erzeugt.
 Der TM-Scan oder Time-Motion-Scan kann durch schnelle Abtastung eine Bildfolge aufnehmen, um beispielsweise Organbewegungen sichtbar zu machen.

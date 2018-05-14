@@ -2,9 +2,10 @@
 \label{sec:Auswertung}
 \subsection{Untersuchung des Acrylblocks mit einer Schieblehre}
 Die gemessene Höhe des Acrylblocks beträgt:
-\begin{equation*}
-  h =  80.25\si{\milli\meter}
-\end{equation*}
+\begin{equation}
+	\label{block_schieb}
+  h =  \SI{80.25}{\milli\meter}
+\end{equation}
 Die Bohrungen des Acrylblocks werden mit einer Schieblehre vermessen.
 Die erhaltenen Werte sind in Tabelle \ref{tab:schieb} eingetragen.
 \begin{table}[H]
@@ -32,14 +33,20 @@ Die erhaltenen Werte sind in Tabelle \ref{tab:schieb} eingetragen.
 \noindent
 \subsection{Untersuchung des Acrylblocks mit A-Scan}
 Der Acrylblock wird wie in der Durchführung beschrieben mit dem A-Scan vermessen.
-Die Schallgeschwindigkeit in Acryl beträgt $c=2730$\cite{acryl}.
-Die Eindringunstiefe kann, dann nach Gleichung\eqref{eq:schall} brechnet werden.
-Die erhaltenen Werte sind in Tabelle\ref{tab:a-scan} eingetragen.
+Die Schallgeschwindigkeit in Acryl beträgt $c=\SI{2730}{\meter\per\second}$\cite{acryl}.
+Die Eindringungstiefe kann, dann nach Gleichung \eqref{eq:schall} berechnet werden.
+Die erhaltenen Werte sind in Tabelle \ref{tab:a-scan} eingetragen.
 Dabei muss die Abweichung, welche durch die Schutzschicht der Sonde entsteht, beachtet werden.
-Diese beträgt:
+Für den gesamten Blockdurchmesser ergibt sich ein Wert von
+\begin{equation}
+	\label{block_scan}
+  h_\text{Scan} = \SI{80.50}{\milli\meter}
+\end{equation}
+Aus der Differenz der Messung mit der Schieblehre \eqref{block_schieb} und der Messung mit dem Scan \eqref{block_scan} ergibt sich die Schichtdicke:
 \begin{equation*}
-  \delta h = 0.25\si{\milli\meter}
+  \delta h = \SI{0.25}{\milli\meter}
 \end{equation*}
+Diese wird im Folgenden von allen Messwerten abgezogen, um die tatsächliche Eindringungstiefe zu erhalten.
 \begin{table}[H]
     \caption{Messung der Bohrungen mit dem A-Scan .}
     \label{tab:a-scan}
@@ -81,7 +88,7 @@ Die Werte sind in Tabelle \ref{tab:aufl} eingetragen.
 \end{table}
 \noindent
 \subsection{Untersuchung des Acrylblocks mit B-Scan}
-Die Messung wird nach der Durchführung beschrieben ausgeführt.
+Die Messung wird wie in der Durchführung beschrieben ausgeführt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{content/bscan-2mhz_oberseite.png}
@@ -119,10 +126,10 @@ Die erhaltenen Werte sind in Tabelle \ref{tab:b-scan} eingetragen.
     \end{tabular}
 \end{table}
 \noindent
-\subsection{Untersuchung des kruden Herzmodells}
-Das Herz hat einen Radius von $r_\text{Herz}=\SI{22.75}{\milli\meter}$.
-Als Schallgeschwindigkeit für Wasser wurde ein Wert von $c=\SI{1484}{\meter\per\second}$ verwendet.
-Die Werte für das Grundniveau und die Maximalausschlag sind in Tabelle \ref{maxschlag} aufgetragen.
+\subsection{Untersuchung des Herzmodells}
+Für das Herz wird einen Radius von $r_\text{Herz}=\SI{22.75}{\milli\meter}$ gemessen.
+Als Schallgeschwindigkeit für Wasser wurde ein Wert von $c=\SI{1484}{\meter\per\second}$\cite{wasser} verwendet.
+Die Werte für das Grundniveau und den Maximalausschlag sind in Tabelle \ref{maxschlag} aufgetragen.
 
 \begin{table}[H]
     \caption{Messung des maximalen Ausschlags.}
@@ -138,8 +145,20 @@ Die Werte für das Grundniveau und die Maximalausschlag sind in Tabelle \ref{max
     \end{tabular}
 \end{table}
 \noindent
-
+Die Oberfläche der Kammer des Herzmodells wird als Kugelschale genähert.
+Das Volumen eines Kugelschnittes lässt sich wie folgt berechnen:
+\begin{align}
+	\label{kugelvol}
+    V &= \frac{\pi h^2}{3}\left( \frac{3({r'}^2+h^2)}{2h} - h \right) \\
+    \symup{\Delta}V &= \frac{\pi h^2}{2}(3{r'}^2+5h^2-2)\symup{\Delta}h
+\end{align}
+Wobei $r'$ der Radius der Herzmodells und $h$ die Auslenkungshöhe ist.
+Für die Messung mittels des A-Scans ergibt sich somit ein Herzvolumen von:
+\begin{equation}
+	V_\text{A-Scan} = \SI{4.29-e5}{\meter\cubed}
+\end{equation}
 Anschließend wird der simulierte Herzschlag untersucht und die Messerbegnisse in Tabelle \ref{tab:schlag} aufgetragen.
+Von den Messwerten ist bereits das Grundniveau abgezogen.
 \begin{table}[H]
     \caption{Messung des Herzschlags.}
     \label{tab:schlag}
@@ -172,8 +191,19 @@ Anschließend wird der simulierte Herzschlag untersucht und die Messerbegnisse i
     \end{tabular}
 \end{table}
 \noindent
-
 Der Herzschlag wurde über eine Zeit von $\SI{27.8}{\second}$ gemessen.
+Der Mittelwert wird gebildet nach der Vorschrift:
+\begin{equation}
+	\overline{h} = \frac{\sum_i^\text{Anzahl der Messwerte}h_i}{\text{Anzahl der Messwerte}}
+\end{equaiton}
+Es wird zusätzlich eine Hilfsgröße eingeführt:
+\begin{equation}
+	\delta h_i = h_i-\overline{h}
+\end{equaiton}
+Die Standardabweichung kann geschrieben werden als:
+\begin{equation}
+	\symup\Delta\overline{h} = \sqrt{\frac{\sum_i^\text{Anzahl der Messwerte}(\delta h)^2}{(\text{Anzahl der Messwerte})(\text{Anzahl der Messwerte} - 1)}}
+\end{equaiton}
 Es ergibt sich somit eine mittlere Schlagauslenkung von
 \begin{equation}
    \overline{h}_\text{Herz} = \SI{14.48\pm0.19}{\milli\meter}
@@ -182,13 +212,7 @@ und
 \begin{equation}
    \overline{\nu}_\text{Herz} = \SI{0.72}{\hertz}.
 \end{equation}
-Das Volumen eines Kugelschnittes lässt sich wie folgt berechnen:
-\begin{align}
-    V &= \frac{\pi h^2}{3}\left( \frac{3({r'}^2+h^2)}{2h} - h \right) \\
-    \symup{\Delta}V &= \frac{\pi h^2}{2}(3{r'}^2+5h^2-2)\symup{\Delta}h
-\end{align}
-Wobei $r'$ der Radius der Herzmodells und $h$ die Auslenkungshöhe ist.
-Somit ergibt sich ein mittlerer Herzstrom von
+Es ergibt sich nach Gleichung \eqref{kugelvol} ein mittlerer Herzstrom von
 \begin{equation}
-   \overline{Q}_\text{Herz} = V(\overline{h}_\text{Herz})\overline{\nu}_\text{Herz} = \SI{9.62\pm0.09e-6}{\meter\cubed\per\second}.
+   \overline{Q}_\text{Herz} = V\left(\overline{h}_\text{Herz}\right)\overline{\nu}_\text{Herz} = \SI{9.62\pm0.09e-6}{\meter\cubed\per\second}.
 \end{equation}
